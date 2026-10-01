@@ -63,7 +63,7 @@
   display: grid;
   gap: 6px;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 18px;
+  margin-bottom: 0;
 }
 
 .main-size-card {
@@ -120,12 +120,24 @@
   line-height: 1.2;
 }
 
+/* Внешний блок скорости */
 .main-speed {
   display: flex;
   gap: 10px;
-  margin-top: 6px;
+  margin-top: 0;
   width: 100%;
   box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+
+.main-speed .main-speed {
+  margin-top: 0;
+}
+
+.main-speed .main-block-title {
+  width: 100%;
+  margin-bottom: 6px;
 }
 
 .main-speed-card {
@@ -307,18 +319,18 @@
 }
 
 @media (max-width: 767px) {
-    .main {
-        left: 10px;
-        right: 10px;
-        top: 50%;
-        bottom: 12px;
-        width: auto;
-        max-width: none;
-    }
+  .main {
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    bottom: 12px;
+    width: auto;
+    max-width: none;
+  }
 }
 
 @media (max-width: 420px) {
-    .main-sizes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .main-sizes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
